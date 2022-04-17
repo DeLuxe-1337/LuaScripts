@@ -3,8 +3,9 @@ while wait() do
         local final_time = (_G.HOUR * 3600) + (_G.MINUTE * 60) + _G.SECOND
         local current_time = os.time()
 
-        while os.time() - current_time < final_time do
-            wait()
+        while os.time() - current_time < final_time and wait() do            
+            final_time = (_G.HOUR * 3600) + (_G.MINUTE * 60) + _G.SECOND --Recalculate incase they change.
+            
             local elapsed = os.time() - current_time
             _G.ElapsedText.Text = "Elapsed: " .. elapsed .. "/" .. final_time
         end
