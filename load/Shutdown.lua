@@ -1,5 +1,4 @@
-task.spawn(function() 
-	while wait() do
+while wait() do
 	        print(_G.HOUR)
 		if _G.HOUR >= 1 or _G.MINUTE >= 1 or _G.SECOND >= 1 then
 			local final_time = (_G.HOUR * 3600) + (_G.MINUTE * 60) + _G.SECOND
@@ -15,4 +14,3 @@ task.spawn(function()
 			game:Shutdown()
 		end
 	end
-end)
