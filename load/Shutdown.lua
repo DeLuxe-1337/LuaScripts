@@ -6,7 +6,6 @@ task.spawn(
                 local current_time = os.time()
 
                 while os.time() - current_time < final_time and wait() do
-                    print(_G.SECOND)
                     final_time = (_G.HOUR * 3600) + (_G.MINUTE * 60) + _G.SECOND
                     
                     local elapsed = os.time() - current_time
