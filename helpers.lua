@@ -1,6 +1,8 @@
 
 --Credits to whom ever made this.
 
+aligned_parts = {}
+
 function Align(Part1, Part0, Position, Angle, name)
     local AlignPos = Instance.new("AlignPosition", Part1)
     AlignPos.Parent.CanCollide = false
@@ -31,6 +33,8 @@ function Align(Part1, Part0, Position, Angle, name)
 
     AlignOrient.Attachment0 = AttachmentA
     AlignOrient.Attachment1 = AttachmentB
+    
+    aligned_parts[name] = AttachmentB
 end
 
 local NetworkAccess =
