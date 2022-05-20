@@ -59,11 +59,6 @@ coroutine.resume(NetworkAccess)
 --I made the following functions...
 
 function Move(p, pos, orien)
-    if pos then
-        p.Position = pos
-    end
-
-    if orien then
-        p.Orientation = orien
-    end
+    local tweenInfo = TweenInfo.new(.3)
+    local tween = game:GetService("TweenService"):Create(p, tweenInfo, {Position = pos, Orientation = orien}):Play()
 end
