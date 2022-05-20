@@ -51,3 +51,15 @@ local NetworkAccess =
     end
 )
 coroutine.resume(NetworkAccess)
+
+--I made the following functions...
+
+function Move(p, pos, orien)
+    if pos then
+        p.Position = pos
+    end
+
+    if orien then
+        p.Orientation = orien
+    end
+end
