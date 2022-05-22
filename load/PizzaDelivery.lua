@@ -1,3 +1,16 @@
+task.spawn(function() 
+    wait(3)
+    
+    repeat wait(2)
+    until game.Players.LocalPlayer.PlayerGui.MainGUI.Scripts.JobHandler.PizzaPlanetDelivery ~= nil
+
+    local pz = require(game.Players.LocalPlayer.PlayerGui.MainGUI.Scripts.JobHandler.PizzaPlanetDelivery)
+
+    if #debug.getupvalues(pz.ShiftLoop) > 1 then
+        hookfunction(pz.ShiftLoop, function() return end)
+    end    
+end)
+
 _, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 
